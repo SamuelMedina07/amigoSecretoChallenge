@@ -88,8 +88,9 @@ body {
 }
 
 .button-container {
-    width: 300px;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Estilos de entrada de texto */
@@ -145,7 +146,7 @@ ul {
 /* Botón de sortear título */
 .button-draw {
     display: flex;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 10px 40px;
     color: var(--color-white);
