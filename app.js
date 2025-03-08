@@ -3,11 +3,12 @@ function agregarAmigo(){
 const amigo = document.getElementById('amigo').value;
 
 if(amigo == ""){
-    console.log('vacio pana');
+    alert('Error! Debe agregar un amigo');
 }
 else {
     listadoAmigos(amigo.toUpperCase());
-document.getElementById('amigo').value = "";
+    document.getElementById("botonSortear").disabled = false;
+    document.getElementById('amigo').value = "";
 }
 
 }
