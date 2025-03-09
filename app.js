@@ -26,20 +26,20 @@ function listadoAmigos(nuevo){
 
 
 function hola(){
-    /*  amigos.forEach(ganador => {
-        console.log(ganador[ganador]);
-    });  */
-
     let ganador = Math.floor(Math.random()*amigos.length);
     console.log(amigos[ganador]);
     console.log(ganador);
-    let nuevoAmigo = document.createElement("li");
-    nuevoAmigo.innerHTML = amigos[ganador];
+    crearElemento("li");
+    //let nuevoAmigo = document.createElement("li");
+    crearNuevo.innerHTML = amigos[ganador];
+    //nuevoAmigo.innerHTML = amigos[ganador];
     let listado = document.getElementById('resultado');
     listado.appendChild(nuevoAmigo);
     
 }
 
-
-
+function crearElemento(etiqueta) {
+    let crearNuevo = document.createElement(etiqueta);
+    return crearNuevo; 
+}
 
