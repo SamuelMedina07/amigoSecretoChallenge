@@ -16,30 +16,24 @@ else {
 
 const amigos = [];
 
-function listadoAmigos(nuevo){    
-    amigos.push(nuevo);
-    let nuevoAmigo = document.createElement("li");
-    nuevoAmigo.innerHTML = nuevo;
+function listadoAmigos(nuevo_amigo){    
+    amigos.push(nuevo_amigo);
     let listado = document.getElementById('listaAmigos');
-    listado.appendChild(nuevoAmigo);
+    listado.appendChild(crearElemento("li", nuevo_amigo));
 }
-
 
 function hola(){
     let ganador = Math.floor(Math.random()*amigos.length);
     console.log(amigos[ganador]);
     console.log(ganador);
-    crearElemento("li");
-    //let nuevoAmigo = document.createElement("li");
-    crearNuevo.innerHTML = amigos[ganador];
-    //nuevoAmigo.innerHTML = amigos[ganador];
     let listado = document.getElementById('resultado');
-    listado.appendChild(nuevoAmigo);
+    listado.appendChild(crearElemento("li",amigos[ganador]));
     
 }
 
-function crearElemento(etiqueta) {
+function crearElemento(etiqueta,nombre_persona) {
     let crearNuevo = document.createElement(etiqueta);
+    crearNuevo.innerHTML = nombre_persona;
     return crearNuevo; 
 }
 
