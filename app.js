@@ -6,9 +6,9 @@ if(amigo == ""){
     alert('Error! Debe agregar un amigo');
 }
 else {
-    listadoAmigos(amigo.toUpperCase());
-    document.getElementById("botonSortear").disabled = false;
-    document.getElementById('amigo').value = "";
+    listadoAmigos(amigo.toUpperCase());  
+    activarBoton('botonSortear');
+    limpiar('amigo');
 }
 
 }
@@ -23,6 +23,9 @@ function listadoAmigos(nuevo_amigo){
 function sortear(){
     let ganador = Math.floor(Math.random()*amigos.length);
     crearElemento("li", amigos[ganador],'resultado');
+    desactivarBoton('botonAnadir');
+    desactivarBoton('botonSortear');
+    limpiar('name-list');
    
 }
 
@@ -36,6 +39,20 @@ function crearElemento(etiqueta_hija,nombre_persona,etiqueta_padre) {
     let listado = document.getElementById(id);
     listado.appendChild(datos);
     return listado;
+}
+
+function limpiar(id) {
+    document.getElementById(id).value = "";
+    const container = document.getElementById('listaAmigos');
+    container.classList.remove(id);
+}
+
+function activarBoton(id) {
+    document.getElementById(id).disabled = false;
+}
+
+function desactivarBoton(id) {
+    document.getElementById(id).disabled = true;
 }
 
 
