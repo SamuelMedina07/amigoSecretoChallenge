@@ -13,33 +13,29 @@ else {
 
 }
 
-
 const amigos = [];
 
-function listadoAmigos(nuevo){    
-    amigos.push(nuevo);
-    let nuevoAmigo = document.createElement("li");
-    nuevoAmigo.innerHTML = nuevo;
-    let listado = document.getElementById('listaAmigos');
-    listado.appendChild(nuevoAmigo);
+function listadoAmigos(nuevo_amigo){    
+    amigos.push(nuevo_amigo);
+    crearElemento("li", nuevo_amigo,"listaAmigos");
 }
 
-
-function hola(){
-    /*  amigos.forEach(ganador => {
-        console.log(ganador[ganador]);
-    });  */
-
+function sortear(){
     let ganador = Math.floor(Math.random()*amigos.length);
-    console.log(amigos[ganador]);
-    console.log(ganador);
-    let nuevoAmigo = document.createElement("li");
-    nuevoAmigo.innerHTML = amigos[ganador];
-    let listado = document.getElementById('resultado');
-    listado.appendChild(nuevoAmigo);
-    
+    crearElemento("li", amigos[ganador],'resultado');
+   
 }
 
+function crearElemento(etiqueta_hija,nombre_persona,etiqueta_padre) {
+    let crearNuevo = document.createElement(etiqueta_hija);
+    crearNuevo.innerHTML = nombre_persona;
+    agregarElemento(etiqueta_padre,crearNuevo);
+}
 
+ function agregarElemento(id,datos){
+    let listado = document.getElementById(id);
+    listado.appendChild(datos);
+    return listado;
+}
 
 
