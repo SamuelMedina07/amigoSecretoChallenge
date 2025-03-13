@@ -1,19 +1,44 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 function agregarAmigo(){
-const amigo = document.getElementById('amigo').value;
+/* const amigo = document.getElementById('amigo').value;
 
 if(amigo == ""){
     alert('Error! Debe agregar un amigo');
 }
-else {
+else { */
     listadoAmigos(amigo.toUpperCase());  
     activarBoton('botonSortear');
     limpiar('amigo');
+    console.log(amigos);
 }
 
-}
 
 const amigos = [];
+
+function verificarCampos(boton) {
+    switch (boton) {
+        case boton=1:
+            if (amigos.length = 0) {
+                alert('Error! No hay personas para el sorteo');
+            }
+            break;
+            
+         case 2:
+
+
+    alert('Error! Debe agregar un amigo');
+   
+            break;  
+
+
+    }
+    
+   /*  if (amigos.length = 0) {
+        alert('Error! No hay personas para el sorteo');
+    } else {
+        agregarAmigo();
+    }    */ 
+}
 
 function listadoAmigos(nuevo_amigo){    
     amigos.push(nuevo_amigo);
@@ -59,10 +84,11 @@ function desactivarBoton(id) {
 }
 
 function nuevoJuego() {
-    document.querySelectorAll('button').forEach(boton => {
-        boton.disabled = false;
-    });
+    activarBoton('botonAnadir');
     limpiar('resultado');
+    limpiar('listaAmigos');
+    while (amigos.length > 0) {
+        amigos.pop();
+    }
+    console.log(amigos);
 }
-
-
