@@ -1,5 +1,5 @@
 # Reto de programación Amigo Secreto
-_Desarrollado por Samuel Ernesto Medina Ramirez_
+_Desarrollado por [Samuel Ernesto Medina Ramirez](https://www.instagram.com/samuelpianito06?igsh=djJjZTNhYWF5M2w1)_
 
 Solamente tuve que aplicar las bases de programacion en la parte del backend el diseño ya habia sido compartido por Alura Latam
 Los botones funcionan correctamente cuando no tienen contenido lanzan una alerta y tambien añadí un boton de nuevo juego para volver 
